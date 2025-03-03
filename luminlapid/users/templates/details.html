@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>{{ user.first_name }}{% if user.middle_name %} {{ user.middle_name }}{% endif %} {{ user.last_name }}</h1>
+  
+<p>Email: {{ user.email }}</p>
+{% if user.phone_number %}
+    <p>Phone Number: {{ user.phone_number }}</p> 
+{% else %}
+    <p>Phone Number: None Provided</p> 
+{% endif %}
+<p>Date Joined: {{ user.joined_date }}</p>
+
+<p>Back to <a href="{% url 'users' %}">Home</a></p>
+
+</body>
+</html>

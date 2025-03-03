@@ -1,0 +1,29 @@
+erDiagram
+    User {
+        AutoField id PK "Primary Key"
+        CharField first_name "max_length=255"
+        CharField middle_name "max_length=255, blank=True"
+        CharField last_name "max_length=255"
+        EmailField email "max_length=511" 
+        PhoneNumberField phone_number "blank=True"
+        DateField joined_date
+        TimeField joined_time
+    }
+    
+    Visit {
+        AutoField id PK "Primary Key"
+        ForeignKey user_id FK "User, on_delete=models.CASCADE"
+        DateField arrive_date
+        TimeField arrive_time
+        DateField departure_date
+        TimeField departure_time
+        CharField1023 purpose
+        CharField39 ip_address
+        CharField10 connection "Active, Inactive, Terminated by User, Terminated by Server"
+        CharField1023 comments
+        CharField1023 location_address
+        CharField1023 location_city
+        CharField1023 location_name
+        CharField1023 location_type
+        CharField1023 location_id
+    }
