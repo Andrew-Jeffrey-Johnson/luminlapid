@@ -1,4 +1,4 @@
-# shell.nix
+# default.nix
 let
   # We pin to a specific nixpkgs commit for reproducibility.
   # Last updated: 2025-02-25. Check for new commits at https://status.nixos.org.
@@ -19,9 +19,12 @@ in pkgs.mkShell {
       matplotlib
       django
       django-types
+      django-extensions
+      django-phonenumber-field
       ipywidgets
       ipython
       ipympl
+      nbconvert
     ]))
   ];
 }
