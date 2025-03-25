@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+		<meta chahrset="UTF-8" />
+		<title>Activity</title>
+	</head>
+	<body>
+		<div class="topnav">
+			<a class="active" href="{% url 'homepage' %}">Home</a>
+			<a href="#blog">Blog</a>
+			<a href="https://github.com/Andrew-Jeffrey-Johnson">GitHub</a>
+			<a href="https://www.youtube.com/channel/UCDI_H9Ox8EcYOHWmtXIRHOg">YouTube</a>
+		</div>
+        <h1>New Activity</h1>
+        <form action="/activity" method="post" autofocus >
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit">
+        </form>
+		<h1>Activity</h1>
+        <ul>
+            {% for activity in all_activities %}
+              <li>{{ activity.datetime }}: {{ activity.action }}</li>
+            {% endfor %}
+          </ul>
+        <a href="{% static 'css/fonts/SIL-Open-Font-License.txt' %}">Liberation Sans Font License</a>
+	</body>
+</html>
