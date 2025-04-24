@@ -23,6 +23,7 @@
     font-style: italic;
 }
 
+/* Removing default margins. Margin will be added as needed. */
 body {
     font-family: 'LiberationSans', Verdana, sans-serif;
     padding: 0px;
