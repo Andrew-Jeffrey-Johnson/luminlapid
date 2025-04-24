@@ -5,6 +5,7 @@ let
   pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/3a05eebede89661660945da1f151959900903b6a.tar.gz") {};
 in pkgs.mkShell {
   packages = [
+    pkgs.bashInteractive
     (pkgs.python313.withPackages (python-pkgs: with python-pkgs; [
       # select Python packages here
       pandas
