@@ -57,6 +57,11 @@ body {
     color: white;
 }
 
+/* Add space between content and edge of screen */
 .maincontent {
     margin: 2%;
+}
+
+.flexbox-container {
+    display: flex;
 }
