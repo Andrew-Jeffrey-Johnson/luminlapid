@@ -63,6 +63,7 @@ body {
     margin: 2%;
 }
 
+/* Separates images from text */
 .flexbox-container {
     display: flex;
 }
