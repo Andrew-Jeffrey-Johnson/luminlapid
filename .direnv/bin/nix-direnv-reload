@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 set -e
-if [[ ! -d "/home/andrewj/Documents/luminlapid" ]]; then
+if [[ ! -d "/mnt/sshfs/luminlapid/luminlapid" ]]; then
   echo "Cannot find source directory; Did you move it?"
-  echo "(Looking for "/home/andrewj/Documents/luminlapid")"
+  echo "(Looking for "/mnt/sshfs/luminlapid/luminlapid")"
   echo 'Cannot force reload with this script - use "direnv reload" manually and then try again'
   exit 1
 fi
 
 # rebuild the cache forcefully
-_nix_direnv_force_reload=1 direnv exec "/home/andrewj/Documents/luminlapid" true
+_nix_direnv_force_reload=1 direnv exec "/mnt/sshfs/luminlapid/luminlapid" true
 
 # Update the mtime for .envrc.
 # This will cause direnv to reload again - but without re-building.
-touch "/home/andrewj/Documents/luminlapid/.envrc"
+touch "/mnt/sshfs/luminlapid/luminlapid/.envrc"
 
 # Also update the timestamp of whatever profile_rc we have.
 # This makes sure that we know we are up to date.
-touch -r "/home/andrewj/Documents/luminlapid/.envrc" "/home/andrewj/Documents/luminlapid/.direnv"/*.rc
+touch -r "/mnt/sshfs/luminlapid/luminlapid/.envrc" "/mnt/sshfs/luminlapid/luminlapid/.direnv"/*.rc
