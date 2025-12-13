@@ -1,4 +1,6 @@
 .direnv/*
+.direnv/bin/*
+.direnv/bin/nix-direnv-reload
 .vscode/
 *.sqlite3
 **/__pycache__/**
