@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "users",
     "homepage",
     "activity",
+    "past_projects",
 ]
 
 MIDDLEWARE = [
