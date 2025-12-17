@@ -7,6 +7,7 @@
 		<title>Andrew Johnson</title>
 	</head>
 	<body>
+      <div class="flexbox-container">
 		<div class="topnav">
 			<a class="active" href="{% url 'homepage' %}">Home</a>
 			<a href="{% url 'past_projects' %}">Past Projects</a>
@@ -14,7 +15,7 @@
 			<a href="https://www.youtube.com/channel/UCDI_H9Ox8EcYOHWmtXIRHOg">YouTube</a>
       <a href="">andrew.jeffrey.johnson@gmail.com</a>
 		</div>
-		<h1>Andrew Johnson</h1>
+		<h1 id="name">Andrew Johnson</h1>
     <h1>Notable Projects</h1>
 			<h2>Personal Linux Server</h2>
 			<p>December 2016 - Present</p>
@@ -28,7 +29,7 @@
 			<h2>Senior Project: Machine Learning &amp; Web Development</h2>
 			<p>September 2021 - June 2022</p>
 			<div class="flexbox-container">
-        <img src="{% static 'senior-project-csv-importer-flowchart.png' %}" alt="Senior project CSV importer flowchart." width="15%" height="15%">
+        <img src="{% static 'senior-project-csv-importer-flowchart.png' %}" alt="Senior project CSV importer flowchart.">
 				<ul>
 					<li>Led a team of 4 students to develop a data-cleansing importer for Excel and CSV files.</li> 
 					<li>Implemented support vector machine learning to categorize transactions for Schedule F tax forms.</li> 
@@ -42,6 +43,24 @@
 				<li>Directed development through flowcharts and documentation.</li>
 				<li>Ensured cross-platform compatibility by adding compile scripts for both Windows and Linux.</li>
 			</ul>
+    <h1>Work Experience</h1>
+			<h2>Intel Corporation: Software Application Engineer</h2>
+			<p>June 2024 - November 2024</p>
+				<ul>
+					<li>Curated Intel version of open-source software repositories for improved security.
+</li> 
+					<li>Hardened internal open-source software by embedding C/C++ compiler flags.
+</li> 
+					<li>Implemented Python &amp; Bash scripts to compile and execute software on Docker &amp; Podman containers.</li> 
+					<li>Applied security patches with git to fix CVEs in software versions released up to 2 years ago.</li> 
+					<li>Peer-reviewed teammates’ work for accuracy, quality, and compliance with guidelines.
+</li> 
+					<li> Wrote GitHub workflows for testing software and generating Debian distribution binaries.
+</li> 
+					<li>Prepared YML files with annotations for BDBA BOM generation to alert users of patched software.
+</li> 
+				</ul>
     <a href="{% static 'css/fonts/SIL-Open-Font-License.txt' %}">Liberation Sans Font License</a>
+			</div>
 	</body>
 </html>
