@@ -8,13 +8,7 @@
 	</head>
 	<body>
       <div class="flexbox-container">
-		<div class="topnav">
-			<a class="active" href="{% url 'homepage' %}">Home</a>
-			<a href="{% url 'past_projects' %}">Past Projects</a>
-			<a href="https://github.com/Andrew-Jeffrey-Johnson">GitHub</a>
-			<a href="https://www.youtube.com/channel/UCDI_H9Ox8EcYOHWmtXIRHOg">YouTube</a>
-      <a href="">andrew.jeffrey.johnson@gmail.com</a>
-		</div>
+    {% include 'top_nav.html' %}
 		<h1 id="name">Andrew Johnson</h1>
     <h1>Notable Projects</h1>
 			<h2>Personal Linux Server</h2>
