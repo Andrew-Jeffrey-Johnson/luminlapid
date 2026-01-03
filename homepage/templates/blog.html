@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}" />
+		<meta chahrset="UTF-8" />
+		<title>Andrew Johnson</title>
+	</head>
+	<body>
+      <div class="flexbox-container">
+		<div class="topnav">
+			<a href="{% url 'homepage' %}">Home</a>
+			<a class="active" href="{% url 'blog' %}">Home</a>
+			<a href="{% url 'past_projects' %}">Past Projects</a>
+			<a href="https://github.com/Andrew-Jeffrey-Johnson">GitHub</a>
+			<a href="https://www.youtube.com/channel/UCDI_H9Ox8EcYOHWmtXIRHOg">YouTube</a>
+      <a href="">andrew.jeffrey.johnson@gmail.com</a>
+		</div>
+    
+    <a href="{% static 'css/fonts/SIL-Open-Font-License.txt' %}">Liberation Sans Font License</a>
+			</div>
+	</body>
+</html>
