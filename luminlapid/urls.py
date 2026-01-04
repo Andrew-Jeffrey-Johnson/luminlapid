@@ -17,11 +17,18 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    # path("admin/", admin.site.urls),
     path("", include("homepage.urls")),
     path("", include("users.urls")),
     path("", include("activity.urls")),
     path("", include("past_projects.urls")),
 ]
+if settings.ADMIN_ENABLED:
+    urlpatterns += path(
+        "",
+        (r"^admin/(.*)", include(admin.site.urls)),
+        # ..maybe other stuff you want to be dev-only, etc...
+    )
